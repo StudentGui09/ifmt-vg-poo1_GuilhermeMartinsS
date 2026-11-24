@@ -13,8 +13,12 @@ public class Leitor {
 
     public Leitor(String nome) {
         // TODO: se nome for null ou em branco, lançar IllegalArgumentException.
+        if (nome == null || nome.isBlank()) {
+        throw new IllegalArgumentException("Nome nulo ou em branco");}
         // TODO: guardar o nome.
+        this.nome=nome;
         // TODO: criar a lista vazia: emprestados = new ArrayList<>();
+        emprestados = new ArrayList<>();
     }
 
     public String getNome() {
@@ -23,25 +27,35 @@ public class Leitor {
 
     public int quantidadeEmprestados() {
         // TODO: retornar o tamanho da lista (size).
-        return 0;
+        return emprestados.size();
     }
 
     public boolean pegar(ItemBiblioteca item) {
         // TODO: se o leitor já tiver LIMITE itens, retornar false.
+        if ( quantidadeEmprestados() >= Leitor.LIMITE) {return false;}
         // TODO: mandar a mensagem item.emprestar(). Se ela retornar false, retornar false.
         // TODO: senão, adicionar o item na lista (add) e retornar true.
-        return false;
+        if (!item.emprestar()) { return false; }
+        emprestados.add(item);
+        return true;
     }
 
     public boolean devolver(ItemBiblioteca item) {
         // TODO: se o item não estiver na lista (contains), retornar false.
         // TODO: senão, remover da lista (remove), mandar item.devolver() e retornar true.
-        return false;
+        if (!emprestados.contains(item)) { return false;}
+        emprestados.remove(item);
+        item.devolver();
+        return true;
     }
 
     public String listarEmprestados() {
         // TODO: montar o texto: nome + " está com:" e, para cada item,
         //       uma linha "\n- " + item.descricao(). Use for (ItemBiblioteca item : emprestados).
-        return "";
+        String textoLista = nome + " esta com: ";
+        for (ItemBiblioteca item : emprestados) {
+        textoLista += "\n-"+item.descricao();
+        }
+        return textoLista;
     }
 }
