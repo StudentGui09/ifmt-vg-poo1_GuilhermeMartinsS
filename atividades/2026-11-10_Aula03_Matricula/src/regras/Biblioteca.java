@@ -35,8 +35,11 @@ public class Biblioteca {
         // TODO 9: se buscarPorTitulo(item.getTitulo()) não for null, lançar
         //         RegraException("Já existe um item com o título \"<título>\"").
         //         Dica: \" escreve aspas dentro de uma String.
+<<<<<<< HEAD
         if (buscarPorTitulo(item.getTitulo()) != null) {
         throw new RegraException("Já existe um item com o titulo " + item.getTitulo());}
+=======
+>>>>>>> f6ea57a2fc6724d52e9524be02dd2d8b7a86e449
         acervo.add(item);
     }
 
@@ -56,6 +59,7 @@ public class Biblioteca {
     public ArrayList<ItemBiblioteca> itensDisponiveis() {
         ArrayList<ItemBiblioteca> livres = new ArrayList<>();
         // TODO 10: percorrer o acervo e colocar em "livres" só os itens disponíveis.
+<<<<<<< HEAD
         for (ItemBiblioteca iten :livres) {
         if (iten.isDisponivel()){
         livres.add(iten);}
@@ -64,6 +68,12 @@ public class Biblioteca {
     }
 
     // Desafio 1 (para quem terminar): buscarPorTrecho(String trecho), ver o LEIAME.//
+=======
+        return livres;
+    }
+
+    // Desafio 1 (para quem terminar): buscarPorTrecho(String trecho), ver o LEIAME.
+>>>>>>> f6ea57a2fc6724d52e9524be02dd2d8b7a86e449
 
     // ---------------- Leitores ----------------
 
@@ -78,13 +88,17 @@ public class Biblioteca {
         // TODO 11: se a lista leitores já contém (contains) este leitor, lançar
         //          RegraException("Matrícula repetida: " + matrícula).
         //          O contains pergunta ao equals do Leitor (TODO 8).
+<<<<<<< HEAD
         if (leitores.contains(leitor)) {throw new RegraException("Matricula repetida: " +leitor.getMatricula());}
+=======
+>>>>>>> f6ea57a2fc6724d52e9524be02dd2d8b7a86e449
         leitores.add(leitor);
     }
 
     public Leitor buscarLeitor(int matricula) {
         // TODO 12: percorrer leitores e devolver o que tem esta matrícula.
         //          Se nenhum tiver, retornar null.
+<<<<<<< HEAD
         for (Leitor leitor: leitores){
         if (leitor.getMatricula()==matricula){
         return leitor;
@@ -92,6 +106,11 @@ public class Biblioteca {
         }
         return null;
     }
+=======
+        return null;
+    }
+
+>>>>>>> f6ea57a2fc6724d52e9524be02dd2d8b7a86e449
     public ArrayList<Leitor> getLeitores() {
         return new ArrayList<>(leitores);
     }

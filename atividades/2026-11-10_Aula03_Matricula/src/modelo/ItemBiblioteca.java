@@ -45,7 +45,11 @@ public class ItemBiblioteca {
         // TODO 1: se disponível, retornar "[disponível] " + descricao();
         //         senão, "[emprestado] " + descricao().
         //         Rode ANTES de fazer: o que aparece no lugar? (algo como modelo.Livro@1b6d3586)
+<<<<<<< HEAD
        if (this.disponivel) {return "[Disponivel] "+descricao();}
        return "[Emprestado] "+ descricao();
+=======
+        return super.toString();
+>>>>>>> f6ea57a2fc6724d52e9524be02dd2d8b7a86e449
     }
 }

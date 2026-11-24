@@ -18,7 +18,11 @@ public class Leitor {
     public Leitor(String nome) {
         // TODO 5: apague a linha abaixo e chame o outro construtor passando
         //         proximaMatricula e nome: this(proximaMatricula, nome);
+<<<<<<< HEAD
         this(proximaMatricula,nome);
+=======
+        this.itens = new ArrayList<>();
+>>>>>>> f6ea57a2fc6724d52e9524be02dd2d8b7a86e449
     }
 
     /** Leitor que já existia (lido de um arquivo): mantém a matrícula. */
@@ -26,6 +30,7 @@ public class Leitor {
         // TODO 6a: nome null ou em branco: IllegalArgumentException("Nome obrigatório").
         // TODO 6b: matricula <= 0: IllegalArgumentException("Matrícula inválida").
         // TODO 6c: guardar a matrícula e nome.trim().
+<<<<<<< HEAD
         // TODO 6d: se matricula >= proximaMatricula, avançar o contador para
         //          matricula + 1. Assim o próximo leitor nunca repete um número.
         this.itens = new ArrayList<>();
@@ -39,6 +44,11 @@ public class Leitor {
         this.nome=nome.trim();
         if (matricula >= proximaMatricula) {
         proximaMatricula= matricula+1;}
+=======
+        this.itens = new ArrayList<>();
+        // TODO 6d: se matricula >= proximaMatricula, avançar o contador para
+        //          matricula + 1. Assim o próximo leitor nunca repete um número.
+>>>>>>> f6ea57a2fc6724d52e9524be02dd2d8b7a86e449
     }
 
     public int getMatricula() {
@@ -92,7 +102,11 @@ public class Leitor {
     public String toString() {
         // TODO 7: matrícula, " - ", nome, " (", quantos itens, "/", LIMITE, ")".
         //         Exemplo: 1 - Ana (0/2)
+<<<<<<< HEAD
         return matricula +" - "+ nome+ " (" + quantidadeItens()+ "/"+LIMITE+")";
+=======
+        return super.toString();
+>>>>>>> f6ea57a2fc6724d52e9524be02dd2d8b7a86e449
     }
 
     @Override
@@ -101,10 +115,14 @@ public class Leitor {
         //         1) se this == outro, retornar true;
         //         2) se outro não for instanceof Leitor, retornar false;
         //         3) comparar matricula == ((Leitor) outro).matricula.
+<<<<<<< HEAD
         if (this == outro) {return true;}
         if (!(outro instanceof Leitor)) {return false;}
         return matricula == ((Leitor) outro).matricula;
         
+=======
+        return super.equals(outro);
+>>>>>>> f6ea57a2fc6724d52e9524be02dd2d8b7a86e449
     }
 
     // Anda junto com o equals: objetos iguais precisam ter o mesmo hashCode.

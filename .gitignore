@@ -16,3 +16,8 @@ apostila/compras.txt
 
 # Configuracao local de editor
 .vscode/
+
+*.pdf
+
+# Apresentacoes das aulas: ficam so na maquina
+*.pptx

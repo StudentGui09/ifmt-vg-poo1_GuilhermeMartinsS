@@ -69,6 +69,8 @@ Toda semana pode entrar uma prática nova em [`atividades`](atividades), **no me
 |---|---|---|---|
 | 27/10 | [`2026-10-27_Aula01_Biblioteca`](atividades/2026-10-27_Aula01_Biblioteca) | Da UML ao Java: `ItemBiblioteca` e `Livro` | 4, 5, 11 |
 | 03/11 | [`2026-11-03_Aula02_Leitores`](atividades/2026-11-03_Aula02_Leitores) | Leitores, acervo e `ArrayList` | 8, 9 |
+| 10/11 | [`2026-11-10_Aula03_Matricula`](atividades/2026-11-10_Aula03_Matricula) | Matrícula, `toString`, `equals` e pacotes `modelo`/`regras` | 6, 7, 10 |
+| 17/11 | [`2026-11-17_Aula04_Emprestimos`](atividades/2026-11-17_Aula04_Emprestimos) | Empréstimos na `Biblioteca`, menu (`tela`) e testes (`testes`) | 9, 12, 13 |
 | … | *próximas práticas* | *entram aqui ao longo do semestre* | |
 
 **O que vem em cada prática**
@@ -80,6 +82,7 @@ atividades/AAAA-MM-DD_AulaNN_Tema/
 └── src/
     ├── Aplicacao.java   ← main de teste pronto: NÃO altere
     └── ...java          ← os arquivos com TODO que você completa
+                           (a partir de 10/11, nos pacotes modelo/ e regras/)
 ```
 
 **Como fazer:** leia o `LEIAME.md`, complete os `TODO`, rode `Aplicacao.java` e confira se a saída bate com os comentários `// Esperado:` do `main`.
@@ -99,6 +102,8 @@ O NetBeans abre a pasta que contém `nbproject`, a que aparece com a xícara ☕
 | `base_conhecimento` | POO1_BaseConhecimento | `Ex00OlaJava` |
 | `atividades/2026-10-27_Aula01_Biblioteca` | Aula01_Biblioteca | `Aplicacao` |
 | `atividades/2026-11-03_Aula02_Leitores` | Aula02_Leitores | `Aplicacao` |
+| `atividades/2026-11-10_Aula03_Matricula` | Aula03_Matricula | `Aplicacao` |
+| `atividades/2026-11-17_Aula04_Emprestimos` | Aula04_Emprestimos | `Aplicacao` |
 
 > ⚠️ **`F6` não é `Shift+F6`.** O `F6` (botão verde) roda sempre a classe da tabela, qualquer que seja o arquivo aberto. Para rodar **o arquivo que você está vendo**, use botão direito > **Run File** (`Shift+F6`). No Output, tem que aparecer `run-single`.
 

@@ -107,6 +107,7 @@ public class Biblioteca {
         }
         // TODO 5: se o leitor atingiu o limite, lançar RegraException
         //         com a mensagem: <nome> já está com <LIMITE> itens
+<<<<<<< HEAD
         if (leitor.atingiuLimite()==true){
             throw new RegraException(leitor.getNome()+" ja esta com "+ leitor.quantidadeItens()+" itens");
         }
@@ -121,6 +122,13 @@ public class Biblioteca {
         emprestimos.add(emp);
         
         return emp;
+=======
+        // TODO 6: mandar a mensagem item.emprestar(). Se ela devolver false,
+        //         lançar RegraException: "<título>" já está emprestado
+        // TODO 7: o leitor recebe o item (leitor.receber). Depois, criar o
+        //         Emprestimo(leitor, item, data), guardar em "emprestimos" e devolvê-lo.
+        return null;
+>>>>>>> f6ea57a2fc6724d52e9524be02dd2d8b7a86e449
     }
 
     public void devolver(Leitor leitor, ItemBiblioteca item) {
@@ -129,6 +137,7 @@ public class Biblioteca {
         }
         // TODO 8: se o leitor NÃO está com o item (leitor.estaCom), lançar
         //         RegraException: <nome> não está com "<título>"
+<<<<<<< HEAD
         if (!leitor.estaCom(item)) {
         throw new RegraException(leitor.getNome()+" não esta com "+item.getTitulo());}
         // TODO 9: o leitor entrega o item, o item é devolvido, e o empréstimo
@@ -141,16 +150,23 @@ public class Biblioteca {
         }
         
         
+=======
+        // TODO 9: o leitor entrega o item, o item é devolvido, e o empréstimo
+        //         ativo deste item é encerrado (e.isAtivo() && e.getItem() == item).
+>>>>>>> f6ea57a2fc6724d52e9524be02dd2d8b7a86e449
     }
 
     public ArrayList<Emprestimo> emprestimosAtivos() {
         ArrayList<Emprestimo> ativos = new ArrayList<>();
         // TODO 10: colocar em "ativos" só os empréstimos que estão ativos.
+<<<<<<< HEAD
         for (Emprestimo e: emprestimos) {
             if (e.isAtivo()) {
                 ativos.add(e);
                 }
         }
+=======
+>>>>>>> f6ea57a2fc6724d52e9524be02dd2d8b7a86e449
         return ativos;
     }
 

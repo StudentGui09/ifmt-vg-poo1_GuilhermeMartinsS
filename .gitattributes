@@ -1,0 +1,6 @@
+# Fim de linha: o Git guarda LF; o editor pode usar CRLF sem gerar alteracao
+* text=auto
+*.pdf binary
+*.docx binary
+*.png binary
+*.jpg binary

@@ -38,8 +38,11 @@ public class Emprestimo {
 
     public void encerrar() {
         // TODO 1: o empréstimo deixa de estar ativo (ativo passa a false).
+<<<<<<< HEAD
         ativo=false;
         
+=======
+>>>>>>> f6ea57a2fc6724d52e9524be02dd2d8b7a86e449
     }
 
     @Override
@@ -47,10 +50,14 @@ public class Emprestimo {
         // TODO 2: montar o texto: data | nome do leitor | título do item | situação
         //         Situação: "em aberto" se ativo, senão "devolvido".
         //         Exemplo: 2026-11-17 | Ana | Dom Casmurro | em aberto
+<<<<<<< HEAD
         String texto = getData()+ " | "+ getLeitor()+" | "+ getItem()+" | ";
         if (ativo == true){
         texto=texto+ "em aberto";} else{
         texto=texto+ "devolvido";}
         return texto;
+=======
+        return "";
+>>>>>>> f6ea57a2fc6724d52e9524be02dd2d8b7a86e449
     }
 }
